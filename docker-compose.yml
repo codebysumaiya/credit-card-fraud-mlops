@@ -1,0 +1,56 @@
+# =========================================================
+# docker-compose.yml
+# Starts the FastAPI app, Prometheus, and Grafana together
+# with a single command: docker-compose up
+# =========================================================
+
+version: "3.9"
+
+services:
+
+  # ---- The fraud detection API itself ----
+  fraud-api:
+    build: .
+    container_name: fraud-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models   # so a retrained model on the host is picked up without rebuilding the image
+    restart: unless-stopped
+    networks:
+      - fraud-net
+
+  # ---- Prometheus: scrapes /metrics from fraud-api ----
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - fraud-api
+    restart: unless-stopped
+    networks:
+      - fraud-net
+
+  # ---- Grafana: visualizes the metrics Prometheus collects ----
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - fraud-net
+
+networks:
+  fraud-net:
+    driver: bridge

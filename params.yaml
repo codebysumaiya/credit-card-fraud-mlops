@@ -1,0 +1,47 @@
+# =========================================================
+# Central configuration file for the MLOps pipeline.
+# Every script (preprocessing, training, prediction) reads
+# from this file instead of having hardcoded values.
+# =========================================================
+
+data:
+  raw_path: "data/raw/creditcard.csv"
+  processed_train_path: "data/processed/train.csv"
+  processed_test_path: "data/processed/test.csv"
+  test_size: 0.2
+  random_state: 42
+  target_column: "Class"
+
+preprocessing:
+  scale_columns:
+    - "Amount"
+    - "Time"
+  handle_imbalance: true
+  imbalance_method: "smote"   # options: smote, undersample, none
+
+training:
+  model_type: "random_forest"   # options: random_forest, logistic_regression
+  random_forest:
+    n_estimators: 150
+    max_depth: 10
+    min_samples_split: 4
+    random_state: 42
+    n_jobs: -1
+  logistic_regression:
+    max_iter: 1000
+    C: 1.0
+    random_state: 42
+
+mlflow:
+  tracking_uri: "mlruns"        # local folder-based tracking store
+  experiment_name: "credit-card-fraud-detection"
+  registered_model_name: "fraud_model"
+
+paths:
+  model_output: "models/fraud_model.pkl"
+  metrics_output: "models/metrics.json"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  prediction_threshold: 0.5

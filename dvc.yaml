@@ -1,0 +1,39 @@
+# =========================================================
+# dvc.yaml
+# Defines the pipeline as a chain of stages. Running
+# `dvc repro` re-runs only the stages affected by whatever
+# changed (code, params, or data) -- not everything blindly.
+# =========================================================
+
+stages:
+
+  preprocess:
+    cmd: python src/data_preprocessing.py
+    deps:
+      - src/data_preprocessing.py
+      - data/raw/creditcard.csv
+    params:
+      - data.test_size
+      - data.random_state
+      - preprocessing.scale_columns
+      - preprocessing.handle_imbalance
+      - preprocessing.imbalance_method
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+
+  train:
+    cmd: python src/data_training.py
+    deps:
+      - src/data_training.py
+      - data/processed/train.csv
+      - data/processed/test.csv
+    params:
+      - training.model_type
+      - training.random_forest
+      - training.logistic_regression
+    outs:
+      - models/fraud_model.pkl
+    metrics:
+      - models/metrics.json:
+          cache: false

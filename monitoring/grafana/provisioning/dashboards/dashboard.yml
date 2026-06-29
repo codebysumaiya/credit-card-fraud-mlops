@@ -1,0 +1,9 @@
+
+apiVersion: 1
+
+providers:
+  - name: "Fraud Detection Dashboards"
+    folder: ""
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards
