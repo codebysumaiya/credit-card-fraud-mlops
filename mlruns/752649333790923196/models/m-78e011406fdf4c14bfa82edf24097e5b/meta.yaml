@@ -1,0 +1,10 @@
+artifact_location: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/models/m-78e011406fdf4c14bfa82edf24097e5b/artifacts
+creation_timestamp: 1782802488033
+experiment_id: '752649333790923196'
+last_updated_timestamp: 1782802495321
+model_id: m-78e011406fdf4c14bfa82edf24097e5b
+model_type: null
+name: model
+source_run_id: c07a0e5d025a4784bc94202fd3b1574a
+status: 2
+status_message: null

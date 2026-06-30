@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/46df3973c502456ab008edaa218b6fe2/artifacts
+end_time: 1782725349573
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: 46df3973c502456ab008edaa218b6fe2
+run_name: exultant-deer-447
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782725095924
+status: 3
+tags: []
+user_id: Sumaiya Chan

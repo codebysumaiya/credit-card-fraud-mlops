@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/4dd30d20ad8f4971a9e532468d365d0e/artifacts
+end_time: 1782723197036
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: 4dd30d20ad8f4971a9e532468d365d0e
+run_name: traveling-stag-839
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782723077271
+status: 3
+tags: []
+user_id: Sumaiya Chan

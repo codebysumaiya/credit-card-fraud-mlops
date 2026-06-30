@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/f29a27a8da204910ade803468687dac5/artifacts
+end_time: 1782791641894
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: f29a27a8da204910ade803468687dac5
+run_name: mercurial-loon-792
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782791558752
+status: 4
+tags: []
+user_id: Sumaiya Chan

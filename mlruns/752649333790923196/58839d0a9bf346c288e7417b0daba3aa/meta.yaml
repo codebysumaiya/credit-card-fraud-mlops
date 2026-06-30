@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/58839d0a9bf346c288e7417b0daba3aa/artifacts
+end_time: 1782741545954
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: 58839d0a9bf346c288e7417b0daba3aa
+run_name: gifted-midge-834
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782741449862
+status: 3
+tags: []
+user_id: Sumaiya Chan

@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/models/m-78e011406fdf4c14bfa82edf24097e5b/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.14
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 3.1.4
+model_id: m-78e011406fdf4c14bfa82edf24097e5b
+model_size_bytes: 5728607
+model_uuid: m-78e011406fdf4c14bfa82edf24097e5b
+prompts: null
+run_id: c07a0e5d025a4784bc94202fd3b1574a
+utc_time_created: '2026-06-30 06:54:48.109061'

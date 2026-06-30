@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/fcadccda7e23440ab3dab0c144f21ae0/artifacts
+end_time: 1782741765611
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: fcadccda7e23440ab3dab0c144f21ae0
+run_name: youthful-penguin-209
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782741633938
+status: 3
+tags: []
+user_id: Sumaiya Chan

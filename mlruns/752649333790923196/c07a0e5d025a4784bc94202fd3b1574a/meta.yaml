@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/c07a0e5d025a4784bc94202fd3b1574a/artifacts
+end_time: 1782802495574
+entry_point_name: ''
+experiment_id: '752649333790923196'
+lifecycle_stage: active
+run_id: c07a0e5d025a4784bc94202fd3b1574a
+run_name: redolent-frog-667
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782802248818
+status: 3
+tags: []
+user_id: Sumaiya Chan

@@ -1,0 +1,18 @@
+aliases: []
+creation_timestamp: 1782725349399
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1782725349399
+metrics: null
+model_id: m-a39f6d51585842cbb0898fbf05cbf8ed
+name: fraud_model
+params: null
+run_id: 46df3973c502456ab008edaa218b6fe2
+run_link: null
+source: models:/m-a39f6d51585842cbb0898fbf05cbf8ed
+status: READY
+status_message: null
+storage_location: file:C:/Users/Sumaiya Chan/OneDrive/Desktop/credit-card-fraud/credit-card-fraud-mlops/mlruns/752649333790923196/models/m-a39f6d51585842cbb0898fbf05cbf8ed/artifacts
+user_id: null
+version: 2
