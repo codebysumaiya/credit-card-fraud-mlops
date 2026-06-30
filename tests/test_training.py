@@ -1,10 +1,11 @@
+
 import sys
 import os
 import numpy as np
 import pandas as pd
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
-from src.data_training import build_model, evaluate_model  # noqa: E402
+from data_training import build_model, evaluate_model  # noqa: E402
 
 
 FAKE_PARAMS = {
@@ -31,6 +32,15 @@ def make_fake_train_test():
     n = 200
     X = pd.DataFrame({f"feat_{i}": np.random.randn(n) for i in range(5)})
     y = pd.Series([0] * 150 + [1] * 50)
+
+    # Shuffle so both classes land in both the train and test splits.
+    # Without this, the split below would put ALL class-1 rows into
+    # the test set and none into train (since y is built sorted: all
+    # 0s first, then all 1s) -- that breaks predict_proba(), which
+    # only returns one column when it's only ever seen one class.
+    shuffled_idx = np.random.permutation(n)
+    X = X.iloc[shuffled_idx].reset_index(drop=True)
+    y = y.iloc[shuffled_idx].reset_index(drop=True)
 
     X_train, X_test = X.iloc[:150], X.iloc[150:]
     y_train, y_test = y.iloc[:150], y.iloc[150:]
