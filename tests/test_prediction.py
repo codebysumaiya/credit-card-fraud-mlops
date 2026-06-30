@@ -10,7 +10,7 @@ import pytest
 from sklearn.ensemble import RandomForestClassifier
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
-from src.predict import FraudPredictor  # noqa: E402
+from predict import FraudPredictor  # noqa: E402
 
 @pytest.fixture
 def fake_predictor(tmp_path):
